@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Password Strength Analyzer</title>
+</head>
+<body>
+
+<h2>Password Strength Analyzer</h2>
+
+<input type="password" id="password" placeholder="Enter Password">
+
+<p id="strength"></p>
+
+<script>
+let password = document.getElementById("password");
+let strength = document.getElementById("strength");
+
+password.addEventListener("input", function() {
+
+let pass = password.value;
+
+if(pass.length < 6){
+strength.innerHTML = "Weak";
+}
+else if(pass.length < 10){
+strength.innerHTML = "Medium";
+}
+else{
+strength.innerHTML = "Strong";
+}
+
+});
+</script>
+
+</body>
+</html>
